@@ -84,7 +84,8 @@ body, p {
 
 .content-row {
 	display: flex;
-	flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .content-block {
@@ -99,8 +100,18 @@ body, p {
 .half-block {
 	width: 49%;
 }
+@media(max-width: 800px) {
+  .half-block {
+    width: 100%;
+  }
+}
 .one-third-block {
 	width: 32%;
+}
+@media(max-width: 500px) {
+ .one-third-block {
+   width: 100%;
+ } 
 }
 .services-box-sizing {
 	width: 45%; 
@@ -254,11 +265,6 @@ div.services-banner {
 	display: flex;
 	flex-wrap: wrap;
 } 
-.services-section-spacing {
-	height: 950px;
-	justify-content: space-between;
-	align-content: space-between;
-}
 
 .services-content-box {
 	padding: 10px;
@@ -312,9 +318,3 @@ footer p.copyright {
 } 
 
 /* media queries */
-
-
-
-@media(max-width: 500px) {
-  
-}
