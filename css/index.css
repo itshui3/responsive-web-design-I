@@ -238,9 +238,15 @@ div.services-banner {
 	right: 0px;
 	top: 20px;
 	height: 380px;
-	width: 380px; /* unresponsive */
+	width: 380px; 
 	background-image: url('../img/header-img.png');
-	/* float: right; */
+}
+
+@media(max-width: 800px) {
+  .banner div.align-banner {
+    width: 100%;
+    justify-content: center;
+  }
 }
 /* main section */
 
