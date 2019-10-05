@@ -153,9 +153,7 @@ a {
     width: 100%;
     text-align: center;
   }
-  nav.top-nav {
-    width: 100%;
-  }
+
   /* banner image needs to poof
   innovation on demand needs to center
   great idea logo needs to go on top of nav. 
@@ -164,6 +162,20 @@ a {
    */
 }
 
+@media(max-width: 500px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    margin: 10px 0px;
+    padding: 10px 0px;
+    width: 95%;
+    text-align: center;
+    border-bottom: 1px solid darkgrey;
+  }
+}
 
 hr { 
 	margin: 2px 0px;
