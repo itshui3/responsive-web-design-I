@@ -1,3 +1,314 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    /* font-family: 'Titillium Web', sans-serif; */
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap');
+
+body, p {
+	font-family: 'Big Shoulders Text', cursive;
+}
+
+/* general styling */
+.container {
+	max-width: 800px; 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0px auto;
+}
+
+.content-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.content-block {
+	box-sizing: border-box;
+	flex-direction: column;
+}
+
+.inner-box {
+	padding: 20px;
+}
+
+.half-block {
+	width: 49%;
+}
+.one-third-block {
+	width: 32%;
+}
+.services-box-sizing {
+	width: 45%; 
+}  
+
+/* nav stuff */
+.nav-container {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.nav {
+  justify-content: space-around;
+  flex-grow: 3;
+  transform: top 0.2s;
+}
+.logo-block {
+  flex-grow: 1;
+}
+a {
+  text-decoration: none; 
+  color: darkgrey;
+}
+/* breakpoints at 500, 800
+
+800px + for desktop
+500~800px for tablet
+500px - for phone*/
+
+@media(max-width: 800px) {
+  .banner .banner-img {
+    display: none;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+  }
+  .logo-block {
+    order: -1;
+    width: 100%;
+    text-align: center;
+  }
+  nav.top-nav {
+    width: 100%;
+  }
+  /* banner image needs to poof
+  innovation on demand needs to center
+  great idea logo needs to go on top of nav. 
+  nav needs to center
+  body section needs to be fluid
+   */
+}
+
+
+hr { 
+	margin: 2px 0px;
+	height: 2px;
+	color: darkgrey;
+	background: darkgrey;
+	z-index: 200;
+	border: 1px solid darkgrey;
+	height: 1px;
+	display: block;
+}
+h2 {
+	font-size: 1.7rem;
+	font-weight: 700;
+}
+
+h3 {
+	font-weight: 600;
+}
+p {
+	line-height: 1.45;
+}
+
+nav a:hover {
+	top: -3px;
+	font-size: 1.05rem;
+	text-decoration: underline;
+}
+nav a:active {
+	top: .5px;
+	left: .2px;
+}
+
+.right-align { 
+	text-align: right;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+/* Banner */
+section.banner {
+	height: 400px;
+	display: flex; 
+	justify-content: flex-end;
+}
+.banner div.align-banner {
+	width: 92%;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+div.services-banner {
+	display: flex;
+	flex-flow: column;
+
+	height: 430px;
+	justify-content: space-around;
+}
+
+.banner .banner-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 350px; /* unresponsive */
+	padding: 35px 0px;
+} 
+.banner .banner-text h1 {
+	font-size: 5rem;
+}
+.banner .banner-text p {
+	box-sizing: border-box;
+	font-size: 1.2rem;
+	border: 1px solid black;
+	width: 50%; /* unresponsive */
+	text-align: center;
+	/* display: inline-block; */
+	margin: 2px;
+	padding: 10px;
+}
+
+.banner .banner-img {
+	right: 0px;
+	top: 20px;
+	height: 380px;
+	width: 380px; /* unresponsive */
+	background-image: url('../img/header-img.png');
+	/* float: right; */
+}
+/* main section */
+
+.main-section-vertical-align {
+	display: flex;
+	flex-wrap: wrap;
+} 
+.services-section-spacing {
+	height: 950px;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.services-content-box {
+	padding: 10px;
+	background-color: lightgrey;
+	border: 1px solid black;
+}
+.learn-button {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 20px;
+	display: inline-block;
+	width: 40%;
+	text-align: center;
+	background: white;
+}
+
+
+.mid-page-accent-image {
+	height: 190px;
+}
+
+/* footer */
+footer {
+	margin-top: 20px;
+}
+.footer-facts {
+	display: flex;
+	justify-content: space-between;
+}
+.footer .footer-facts .content-block ul {
+	list-style: square inside;
+	margin-top: 10px;
+}
+.footer .footer-facts .content-block ul li {
+	padding: 7px;
+}
+
+footer .contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 130px;
+}
+
+.footer .footer-img img {
+	max-width: 393.75px;
+}
+footer p.copyright {
+	text-align: center;
+	margin: 50px 0px;
+} 
+
+/* media queries */
+
+
+
+@media(max-width: 500px) {
+  
+}
