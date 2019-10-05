@@ -84,11 +84,17 @@ body, p {
 	justify-content: space-between;
 	margin: 0px auto;
 }
+@media (max-width: 800px) {
+  .container {
+    width: 95%;
+  }
+}
 
 .content-row {
 	display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .content-block {
@@ -101,7 +107,7 @@ body, p {
 }
 
 .half-block {
-	width: 49%;
+	width: 45%;
 }
 @media(max-width: 800px) {
   .half-block {
@@ -110,7 +116,7 @@ body, p {
   }
 }
 .one-third-block {
-	width: 32%;
+	width: 30%;
 }
 @media(max-width: 500px) {
  .one-third-block {
