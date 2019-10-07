@@ -297,6 +297,11 @@ div.services-banner {
 	background-color: lightgrey;
 	border: 1px solid black;
 }
+@media (min-width: 550px) {
+	.services-content-box {
+		width: 45%;
+	}
+}
 .learn-button {
 	border: 1px solid black;
 	border-radius: 5px;
