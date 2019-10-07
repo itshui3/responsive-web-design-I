@@ -315,16 +315,33 @@ div.services-banner {
 /* footer */
 footer {
 	margin-top: 20px;
-}
-.footer-facts {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 }
-.footer .footer-facts .content-block ul {
+
+@media (min-width: 550px) {
+	footer {
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+footer div.content-block {
+	display: flex;
+	flex-direction: column;
+}
+@media (min-width: 550px) {
+	footer div.content-block {
+		width: 45%;
+
+	}
+}
+footer .content-block ul {
 	list-style: square inside;
 	margin-top: 10px;
 }
-.footer .footer-facts .content-block ul li {
+footer .content-block ul li {
 	padding: 7px;
 }
 
@@ -335,10 +352,17 @@ footer .contact {
 	height: 130px;
 }
 
-.footer .footer-img img {
-	max-width: 393.75px;
+
+footer img {
+	width: 95%;
+}
+@media (min-width: 550px) {
+	footer img {
+		width: 45%;
+	}
 }
 footer p.copyright {
+	width: 100%;
 	text-align: center;
 	margin: 50px 0px;
 } 
