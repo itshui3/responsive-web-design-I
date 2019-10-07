@@ -288,6 +288,13 @@ div.services-banner {
 }
 /* main section */
 
+@media (min-width: 550px) {
+	section.services-main {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
 .middle-img {
   width: 100%;
 }
